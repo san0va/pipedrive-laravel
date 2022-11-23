@@ -35,7 +35,8 @@ class AuthController extends Controller
 
         $authUser = $this->findOrCreateUser($user);
         Auth::login($authUser, true);
-        return redirect('/home');
+        $redirectvar = Auth::user()->id;
+        return redirect('dashboard/'.$redirectvar.'');
     }
 
     /**
