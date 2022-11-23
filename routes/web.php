@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard/{user}', 'ProfilesController@index')->name('dashboard.show');
 
 Route::get('/login', function () {
     return \Illuminate\Support\Facades\Redirect::to('auth/pipedrive');

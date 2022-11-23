@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Pipedrive App</title>
+    <title>PaidYET Pipedrive Application</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -95,19 +95,20 @@
             @endauth
         </div>
     @endif
-
+	
     <div class="content">
-        <a href="https://developers.pipedrive.com">
-            <img src="img/pdd.png" width="170"
+	<div class="title m-b-md">
+            Advanced Payment Gateway Technology.
+        </div>
+        <a href="#">
+            <img src="https://paidyet.com/wp-content/uploads/2022/08/PaidYET-Website-Footer-logo-2022-horizontal.png" max-height="170"
                  style="margin-bottom: 15px;"
             class="p-developers">
         </a><br>
         <a href="{{ url('/auth/pipedrive') }}" class="pd-login">Login with Pipedrive</a>
-        <div class="title m-b-md">
-            Build something amazing!
-        </div>
+        
 
-        <div class="links">
+        <div class="links" style="display: none;">
             <a href="https://pipedrive.com">Pipedrive</a>
             <a href="https://pipedrive.readme.io/docs">Documentation</a>
             <a href="https://devcommunity.pipedrive.com/">Community</a>
