@@ -11,9 +11,11 @@
 |
 */
 
+
 Route::get('/', function () {
+    $redirectvar = Auth::user()->id;
     if (Auth::check()) {
-        return \Illuminate\Support\Facades\Redirect::to('home');
+        return \Illuminate\Support\Facades\Redirect::to('dashboard/'.$redirectvar.'');
     }
     return view('welcome');
 });
