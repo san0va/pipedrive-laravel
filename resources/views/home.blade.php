@@ -26,6 +26,10 @@
                             No deals here...
                         @endif
 
+                        <p>{{ $user->profile->title }}</p>
+                        <p>{{ $user->profile->description }}</p>
+                        <p>{{ $user->profile->persons }}</p>
+
                     </div>
                 </div>
             </div>

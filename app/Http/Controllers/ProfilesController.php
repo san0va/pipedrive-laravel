@@ -24,7 +24,7 @@ class ProfilesController extends Controller
      */
     public function index($user)
     {
-        $user = User::find($user);
+        $user = User::findOrFail($user);
 
 		$pipedrive = app()->make('\Devio\Pipedrive\Pipedrive');
         return view('home', [
