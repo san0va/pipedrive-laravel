@@ -14,6 +14,7 @@
                             </div>
                         @endif
                         <h3>Hi <b>{{Auth::user()->name}}</b></h3>
+                        <p>Pipedrive User ID: {{ $user->pipedrive_user_id }}</p>
                         @if($data)
                             <h4>These are your deals:</h4>
                             <ul>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 class ProfilesController extends Controller
@@ -23,8 +24,11 @@ class ProfilesController extends Controller
      */
     public function index($user)
     {
-        dd($user);
+        $user = User::find($user);
+
 		$pipedrive = app()->make('\Devio\Pipedrive\Pipedrive');
-        return view('home')->with('data', $pipedrive->deals->all()->getData());
+        return view('home', [
+            'user' => $user,
+        ])->with('data', $pipedrive->deals->all()->getData());
     }
 }
