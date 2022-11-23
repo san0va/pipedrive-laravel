@@ -13,8 +13,9 @@
 
 
 Route::get('/', function () {
-    $redirectvar = Auth::user()->id;
+    
     if (Auth::check()) {
+        $redirectvar = Auth::user()->id;
         return \Illuminate\Support\Facades\Redirect::to('dashboard/'.$redirectvar.'');
     }
     return view('welcome');
