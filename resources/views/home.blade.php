@@ -27,10 +27,10 @@
                         @endif
 
                         @php
-                        $prompt_msg = "Please type your name.";
-                        $name = prompt($prompt_msg);
+                        $prompt_msg = "Next we will save this to the database";
+                        $paypage = prompt($prompt_msg);
 
-                        $output_msg = "Hello there ".$name."!";
+                        $output_msg = "Hello there ".$paypage."!";
                         echo($output_msg);
                         @endphp
 
