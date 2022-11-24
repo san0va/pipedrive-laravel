@@ -39,7 +39,7 @@
 
                         <div id="card-element-cof" ></div >
                         <div id="card-errors" ></div >
-                        <a name="tokenizecard" class="btn">submit</a>
+                        <a id="submit" name="submit" class="btn">Submit</a>
                         <p>{{ $user->profile->title }}</p>
                         <p>{{ $user->profile->description }}</p>
                         <p>{{ $user->profile->persons }}</p>

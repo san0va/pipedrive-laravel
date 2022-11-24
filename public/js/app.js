@@ -37035,15 +37035,16 @@ var urlParams = new URLSearchParams(queryString);
 var paypage = urlParams.get('paypage');
 
 PaidYET.init(paypage);
-PaidYET.renderCOFForm('card-element-cof');
+PaidYET.renderForm('card-element-cof');
 
-$("a[name=tokenizecard]").click(function (e) {
+/*$("a[name=tokenizecard]").click(function(e){ 
+    e.preventDefault();
     PaidYET.processPayment(function (e) {
         if (e.success) {
-            alert('card type: ' + e.type + ' token: ' + e.token);
+            alert('card type: '+e.type+' token: '+e.token);
         }
     });
-});
+}); */
 
 /***/ }),
 /* 36 */

@@ -5,12 +5,17 @@ const urlParams = new URLSearchParams(queryString);
 const paypage = urlParams.get('paypage');
 
 PaidYET.init(paypage);
-PaidYET.renderCOFForm('card-element-cof');
+PaidYET.renderForm('card-element-cof');
 
-$("a[name=tokenizecard]").click(function(e){ 
-    PaidYET.processPayment(function (e) {
-        if (e.success) {
-            alert('card type: '+e.type+' token: '+e.token);
-        }
-    });
+/*$("#submit").click(function(e){
+    e.preventDefault();      
+PaidYET.processPayment(function (e) {
+   if (e.success) {
+   alert('Successful Payment');
+ }
+  else {
+    alert('error');
+  }
+});
 })
+*/

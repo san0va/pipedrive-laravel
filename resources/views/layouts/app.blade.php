@@ -12,8 +12,14 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <script src="https://cdn.paidyet.com/paynowv3.js"></script>
+    
+    <script src ="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script src="https://cdn.paidyet.com/paynowv3.js"></script> 
+    
+    
 </head>
+
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
@@ -68,6 +74,34 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src ="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+     const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
+const paypage = urlParams.get('paypage');
+
+PaidYET.init(paypage);
+PaidYET.renderForm('card-element-cof');   
+    $("#submit").click(function(e){
+        e.preventDefault();      
+        PaidYET.processPayment(function (e) {
+            if (e.success) {
+            alert('Successful Payment');
+        }
+            else {
+                alert('error');
+            }
+        });
+    });
     
+</script>
+    
+    
+    
+   
+
+ 
 </body>
+
 </html>
