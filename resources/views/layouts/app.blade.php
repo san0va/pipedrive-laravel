@@ -76,13 +76,13 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <script src ="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-     const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
 
-const paypage = urlParams.get('paypage');
+    const paypage = urlParams.get('paypage');
 
-PaidYET.init(paypage);
-PaidYET.renderForm('card-element-cof');   
+    PaidYET.init(paypage);
+    PaidYET.renderForm('card-element-cof');   
     $("#submit").click(function(e){
         e.preventDefault();      
         PaidYET.processPayment(function (e) {
@@ -94,14 +94,6 @@ PaidYET.renderForm('card-element-cof');
             }
         });
     });
-    
 </script>
-    
-    
-    
-   
-
- 
 </body>
-
 </html>
