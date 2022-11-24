@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -26,13 +27,15 @@
                             No deals here...
                         @endif
 
+                        <form>
+                            <input name="paypage" />
+                            <button type="submit">Submit</button> 
+                        </form>
                         @php
-                        $prompt_msg = "Next we will save this to the database";
-                        $paypage = prompt($prompt_msg);
-
-                        $output_msg = "Hello there ".$paypage."!";
-                        echo($output_msg);
+                        $paypage = Request::input('paypage');
                         @endphp
+
+                        <p>{{ $paypage }} 
 
                         <div id="card-element-cof" ></div >
                         <div id="card-errors" ></div >

@@ -1,0 +1,15 @@
+<?php
+
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+
+Class Helpers extends Authenticatable
+{
+    function prompt($prompt_msg){
+            echo("<script type='text/javascript'> var answer = prompt('".$prompt_msg."'); </script>");
+
+            $answer = "<script type='text/javascript'> document.write(answer); </script>";
+
+            return($answer);
+        }
+}

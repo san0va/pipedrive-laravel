@@ -37028,7 +37028,13 @@ module.exports = function spread(callback) {
 /* 35 */
 /***/ (function(module, exports) {
 
-PaidYET.init($paypage);
+
+var queryString = window.location.search;
+var urlParams = new URLSearchParams(queryString);
+
+var paypage = urlParams.get('paypage');
+
+PaidYET.init(paypage);
 PaidYET.renderCOFForm('card-element-cof');
 
 $("a[name=tokenizecard]").click(function (e) {
