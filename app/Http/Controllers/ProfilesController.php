@@ -31,4 +31,9 @@ class ProfilesController extends Controller
             'user' => $user,
         ])->with('data', $pipedrive->deals->all()->getData());
     }
+
+    
+
+   
+    
 }

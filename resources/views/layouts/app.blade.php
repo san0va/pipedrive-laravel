@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="https://cdn.paidyet.com/paynowv3.js"></script>
 </head>
 <body>
     <div id="app">

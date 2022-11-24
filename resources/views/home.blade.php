@@ -26,6 +26,17 @@
                             No deals here...
                         @endif
 
+                        @php
+                        $prompt_msg = "Please type your name.";
+                        $name = prompt($prompt_msg);
+
+                        $output_msg = "Hello there ".$name."!";
+                        echo($output_msg);
+                        @endphp
+
+                        <div id="card-element-cof" ></div >
+                        <div id="card-errors" ></div >
+                        <a name="tokenizecard" class="btn">submit</a>
                         <p>{{ $user->profile->title }}</p>
                         <p>{{ $user->profile->description }}</p>
                         <p>{{ $user->profile->persons }}</p>
@@ -35,5 +46,5 @@
             </div>
         </div>
     </div>
-	
+
 @endsection
