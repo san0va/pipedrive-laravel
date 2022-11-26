@@ -37029,22 +37029,26 @@ module.exports = function spread(callback) {
 /***/ (function(module, exports) {
 
 
-var queryString = window.location.search;
-var urlParams = new URLSearchParams(queryString);
+/*const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
 
-var paypage = urlParams.get('paypage');
+const paypage = urlParams.get('paypage');
 
 PaidYET.init(paypage);
 PaidYET.renderForm('card-element-cof');
 
-/*$("a[name=tokenizecard]").click(function(e){ 
-    e.preventDefault();
-    PaidYET.processPayment(function (e) {
-        if (e.success) {
-            alert('card type: '+e.type+' token: '+e.token);
-        }
-    });
-}); */
+$("#submit").click(function(e){
+    e.preventDefault();      
+PaidYET.processPayment(function (e) {
+   if (e.success) {
+   alert('Successful Payment');
+ }
+  else {
+    alert('error');
+  }
+});
+})
+*/
 
 /***/ }),
 /* 36 */

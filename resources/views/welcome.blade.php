@@ -98,14 +98,14 @@
 	
     <div class="content">
 	<div class="title m-b-md">
-            Advanced Payment Gateway Technology.
+            PaidYET Card-On-File Tool
         </div>
         <a href="#">
             <img src="https://paidyet.com/wp-content/uploads/2022/08/PaidYET-Website-Footer-logo-2022-horizontal.png" max-height="170"
                  style="margin-bottom: 15px;"
             class="p-developers">
         </a><br>
-        <a href="{{ url('/auth/pipedrive') }}" class="pd-login">Login with Pipedrive</a>
+        <a href="{{ url('/auth/pipedrive') }}" class="pd-login">Login with Pipedrive to Get Started</a>
         
 
         <div class="links" style="display: none;">

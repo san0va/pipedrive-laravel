@@ -17,10 +17,16 @@
     
     <script src="https://cdn.paidyet.com/paynowv3.js"></script> 
     
-    
+    <style>
+    .btn {
+    color: #fff;
+    background-color: #187de4;
+    border-color: #187de4;
+    }
+    </style>
 </head>
 
-<body>
+<body style=" background: #09afdf">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
@@ -82,12 +88,12 @@
     const paypage = urlParams.get('paypage');
 
     PaidYET.init(paypage);
-    PaidYET.renderForm('card-element-cof');   
+    PaidYET.renderCOFForm('card-element-cof');   
     $("#submit").click(function(e){
         e.preventDefault();      
         PaidYET.processPayment(function (e) {
             if (e.success) {
-            alert('Successful Payment');
+                alert('Card-On-File Successfully Added. | Card type: '+e.type+' token: '+e.token);
         }
             else {
                 alert('error');
