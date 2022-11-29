@@ -19,7 +19,7 @@
                         <h4>PaidYET Card-On-File Widget</h4>
                         <p>Tokenizes card data with secure hosted input fields stores that token to your Paidyet merchant account, which you can then charge from your PaidYET Merchant Dashboard.</p>
                         
-                        <p>Enter your PaidYET Subdomain to select your account:</p>
+                        <p><strong>Enter your PaidYET Subdomain to select your account:</strong></p>
                         <div class="input-group"> 
                         @php
                         $paypage = Request::input('paypage');
@@ -40,7 +40,7 @@
                            
                         @else
                             <hr />
-                            <p><strong>Please enter your PaidYET subdomain above to enable the widget.</strong>
+                            <p><strong>Please enter your PaidYET subdomain above to select your account &amp; enable the widget.</strong>
                             <br /> Don't have a PaidYET subdomain? Request one <a href="https://paidyet.com/request" target="_BLANK">here</a>
                         @endif
                         <hr />
